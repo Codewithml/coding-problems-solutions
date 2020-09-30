@@ -12,5 +12,11 @@ class CompressString(object):
                 result += prev_char + (str(count) if count > 1 else '')
                 prev_char = char
                 count = 1
-        result += prev_char + (str(count) if count > 1 else '')
+        if count > 2:
+            result += prev_char + (str(count))
+        elif count == 2:
+            result += prev_char
+            result += prev_char
+        else:
+            result += prev_char
         return result if len(result) < len(input) else input
