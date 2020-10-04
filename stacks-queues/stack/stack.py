@@ -8,6 +8,14 @@ class Stack(object):
     def __init__(self, top=None):
         self.top = top
 
+    def __len__(self):
+        curr = self.top
+        counter = 0
+        while curr is not None:
+            counter += 1
+            curr = curr.next
+        return counter
+
     def pop(self):
         if self.top is None:
             return None
@@ -23,3 +31,9 @@ class Stack(object):
 
     def isEmpty(self):
         return self.peek() is None
+
+    def getData(self):
+        curr = self.top
+        while curr is not None:
+            print(curr.data)
+            curr = curr.next
