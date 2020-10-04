@@ -7,7 +7,6 @@ class TestStack(unittest.TestCase):
         print('Test: Empty stack')
         stack = Stack()
         self.assertAlmostEqual(len(stack), 0)
-        # self.assertEqual(stack.getData(), )
         self.assertEqual(stack.peek(), None)
         self.assertEqual(stack.pop(), None)
 
@@ -15,7 +14,6 @@ class TestStack(unittest.TestCase):
         top = Node(5)
         stack = Stack(top)
         self.assertEqual(len(stack), 1)
-        self.assertEqual(stack.getData(), None)
         self.assertEqual(stack.pop(), 5)
         self.assertEqual(stack.peek(), None)
 
@@ -25,7 +23,6 @@ class TestStack(unittest.TestCase):
         stack.push(2)
         stack.push(3)
         self.assertEqual(len(stack), 3)
-        self.assertEqual(stack.getData(), None)
         self.assertEqual(stack.pop(), 3)
         self.assertEqual(len(stack), 2)
         self.assertEqual(stack.peek(), 2)

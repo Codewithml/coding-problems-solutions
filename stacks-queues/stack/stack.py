@@ -31,9 +31,3 @@ class Stack(object):
 
     def isEmpty(self):
         return self.peek() is None
-
-    def getData(self):
-        curr = self.top
-        while curr is not None:
-            print(curr.data)
-            curr = curr.next
