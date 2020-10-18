@@ -13,6 +13,7 @@ class TestQueue(unittest.TestCase):
         qu = Queue()
         qu.enqueue(2)
         qu.enqueue(3)
+        self.assertEqual(len(qu), 2)
         self.assertEqual(qu.getData(), [2, 3])
         print('Success: enqueue')
 
@@ -26,11 +27,12 @@ class TestQueue(unittest.TestCase):
         qu.enqueue(1)
         qu.enqueue(3)
         qu.enqueue(5)
+        self.assertEqual(len(qu), 3)
         self.assertEqual(qu.dequeue(), 1)
         self.assertEqual(qu.dequeue(), 3)
         self.assertEqual(qu.dequeue(), 5)
 
-        print('Success: testDequeue') 
+        print('Success: testDequeue')
 
 
 def main():

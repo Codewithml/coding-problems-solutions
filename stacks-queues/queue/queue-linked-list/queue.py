@@ -11,6 +11,14 @@ class Queue(object):
         self.head = None
         self.tail = None
 
+    def __len__(self):
+        counter = 0
+        curr_node = self.head
+        while curr_node is not None:
+            counter += 1
+            curr_node = curr_node.next
+        return counter
+
     def enqueue(self, data):
         node = Node(data)
         if self.head is None and self.tail is None:
