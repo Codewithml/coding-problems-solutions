@@ -1,4 +1,4 @@
-def capitals(word):
+def find_capitals(word):
     res = []
     for i in range(len(word)):
         if word[i].isupper():
@@ -7,4 +7,4 @@ def capitals(word):
 
 
 if __name__ == "__main__":
-    print(capitals("CodEWars"))
+    print(find_capitals("CodEWars"))
