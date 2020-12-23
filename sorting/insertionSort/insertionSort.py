@@ -7,7 +7,6 @@ class InsertionSort(object):
             return data
         for i in range(1, len(data)):
             for j in range(i):
-                print(i, j)
                 if data[i] < data[j]:
                     temp = data[i]
                     data[j+1:i+1] = data[j:i]
