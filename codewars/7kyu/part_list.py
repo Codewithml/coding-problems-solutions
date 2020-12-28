@@ -1,5 +1,5 @@
 def partlist(arr):
-    return [(" ".join(arr[:i+1]), " ".join(arr[i+1:])) for i in range(len(arr)-1)]
+    return [(" ".join(arr[:i]), " ".join(arr[i:])) for i in range(1, len(arr))]
 
 
 if __name__ == "__main__":
